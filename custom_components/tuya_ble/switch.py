@@ -91,7 +91,7 @@ def set_fingerbot_program_repeat_forever(
         datapoint = self._device.datapoints[product.fingerbot.program]
         if datapoint and type(datapoint.value) is bytes:
             new_value = (
-                int.to_bytes(0xFFFF if value else 1, 2, "big") + 
+                int.to_bytes(0xFFFF if value else 1, 2, "big") +
                 datapoint.value[2:]
             )
             self._hass.create_task(datapoint.set_value(new_value))
@@ -163,7 +163,22 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
     "ms": TuyaBLECategorySwitchMapping(
         products={
             **dict.fromkeys(
-                ["ludzroix", "isk2p555"], # Smart Lock
+                [
+                    "ludzroix", # Smart Lock
+                    "isk2p555", # Smart Lock
+                    "1nmdfdzp", # Smart Lock Cylinder
+                ],
+                [
+                    TuyaBLESwitchMapping(
+                        dp_id=47,
+                        description=SwitchEntityDescription(
+                            key="lock_motor_state",
+                        ),
+                    ),
+                ]
+            ),
+            **dict.fromkeys(
+                [""], # Smart Lock Cylinder
                 [
                     TuyaBLESwitchMapping(
                         dp_id=47,

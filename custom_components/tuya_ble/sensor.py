@@ -149,7 +149,11 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
     "ms": TuyaBLECategorySensorMapping(
         products={
             **dict.fromkeys(
-                ["ludzroix", "isk2p555"], # Smart Lock
+                [
+                    "ludzroix", # Smart Lock
+                    "isk2p555", # Smart Lock
+                    "1nmdfdzp", # Smart Lock Cylinder
+                ],
                 [
                     TuyaBLESensorMapping(
                         dp_id=21,
@@ -198,7 +202,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                 [
                     "blliqpsj",
                     "ndvkgsrm",
-                    "yiihr7zh", 
+                    "yiihr7zh",
                     "neq16kgd"
                 ],  # Fingerbot Plus
                 [

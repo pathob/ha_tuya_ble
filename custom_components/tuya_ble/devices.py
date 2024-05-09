@@ -185,8 +185,9 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
         products={
             **dict.fromkeys(
                 [
-                    "ludzroix",
-                    "isk2p555"
+                    "ludzroix", # Smart Lock
+                    "isk2p555", # Smart Lock
+                    "1nmdfdzp", # Smart Lock Cylinder
                 ],
                     TuyaBLEProductInfo(  # device product_id
                     name="Smart Lock",
@@ -222,7 +223,7 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
                 [
                     "blliqpsj",
                     "ndvkgsrm",
-                    "yiihr7zh", 
+                    "yiihr7zh",
                     "neq16kgd"
                 ],  # device product_ids
                 TuyaBLEProductInfo(
@@ -268,10 +269,10 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
         products={
             **dict.fromkeys(
             [
-            "drlajpqc", 
+            "drlajpqc",
             "nhj2j7su",
             ],  # device product_id
-            TuyaBLEProductInfo(  
+            TuyaBLEProductInfo(
                 name="Thermostatic Radiator Valve",
                 ),
             ),
